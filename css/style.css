@@ -33,14 +33,25 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   height: 68px;
 }
+
 .nav-logo {
   font-family: var(--font-display);
   font-size: 26px; font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--black);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
 .nav-logo span { color: var(--red); }
+
+.logo-img {
+  height: 60px; /*altera o tamanho da imagem do logo*/
+  width: auto;
+}
+
 .nav-links {
   display: flex; gap: 36px; list-style: none;
 }
