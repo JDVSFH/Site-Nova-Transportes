@@ -42,7 +42,7 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px; /*muda a distancia do texto pro logo*/
 }
 
 .nav-logo span { color: var(--red); }
