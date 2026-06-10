@@ -56,6 +56,29 @@ function handleSubmit() {
   }, 1200);
 }
 
+// Carrossel da seção Sobre
+(function() {
+  var total = 2, current = 0, timer;
+  function goTo(idx) {
+    document.getElementById('sobre-slide-' + current).classList.remove('active');
+    document.getElementById('sobre-dot-' + current).classList.remove('active');
+    current = idx;
+    document.getElementById('sobre-slide-' + current).classList.add('active');
+    document.getElementById('sobre-dot-' + current).classList.add('active');
+  }
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(function() { goTo((current + 1) % total); }, 6000);
+  }
+  for (var i = 0; i < total; i++) {
+    (function(idx) {
+      var dot = document.getElementById('sobre-dot-' + idx);
+      if (dot) dot.addEventListener('click', function() { goTo(idx); startAuto(); });
+    })(i);
+  }
+  startAuto();
+})();
+
 // Ativar link correto do menu de navegação ao navegar pela página
 const sections = document.querySelectorAll('section[id], #numeros');
 const navLinks = document.querySelectorAll('.nav-links a');

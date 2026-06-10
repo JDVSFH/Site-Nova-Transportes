@@ -45,13 +45,16 @@
       <a href="#servicos" class="btn-outline">Ver Serviços</a>
     </div>
   </div>
-  <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=80" alt="Frota Nova Transportes em rodovia" loading="eager">
+ <div class="hero-right">
+    <img src="img/hero-entrega.png"
+         alt="Entrega Nova Transportes"
+         loading="eager">
+
     <div class="hero-badge">
-      <span class="hero-badge-num">98%</span>
-      <span class="hero-badge-text">Entregas no prazo</span>
+        <span class="hero-badge-num">✓</span>
+        <span class="hero-badge-text">Entregas no prazo</span>
     </div>
-  </div>
+</div>
 </section>
 
 <div id="numeros">
@@ -64,12 +67,12 @@
     <div class="num-label">Clientes atendidos</div>
   </div>
   <div class="num-item reveal d2">
-    <div class="num-value">120<span>+</span></div>
+    <div class="num-value">3<span>+</span></div>
     <div class="num-label">Veículos na frota</div>
   </div>
   <div class="num-item reveal d3">
-    <div class="num-value">2<span></span></div>
-    <div class="num-label">Regiões atendidas<br><small class="num-regioes">Sudeste · Centro-Oeste</small></div>
+    <div class="num-value">São Paulo e Interior<span></span></div>
+    <div class="num-label"><br><small class="num-regioes"></small></div>
   </div>
 </div>
 
@@ -108,10 +111,13 @@
 <section id="sobre">
   <div class="sobre-inner">
     <div class="sobre-img-col">
-      <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=80" alt="Equipe Nova Transportes" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;">
-      <div class="sobre-badge-anos">
-        <div style="font-family:var(--font-display);font-size:42px;font-weight:800;color:var(--white);line-height:1;">15</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.8);margin-top:4px;">anos no mercado</div>
+      <div class="sobre-carousel" id="sobreCarousel">
+        <img src="img/frota_1.png" alt="Frota Nova Transportes — caminhão VW Delivery" class="sobre-slide active" id="sobre-slide-0">
+        <img src="img/frota_2.png" alt="Frota Nova Transportes — vans" class="sobre-slide" id="sobre-slide-1">
+        <div class="sobre-dots">
+          <button class="sobre-dot active" id="sobre-dot-0" aria-label="Foto 1"></button>
+          <button class="sobre-dot" id="sobre-dot-1" aria-label="Foto 2"></button>
+        </div>
       </div>
     </div>
     <div class="sobre-text-col">
@@ -278,11 +284,11 @@
       <div class="form-row">
         <div class="form-group">
           <label>E-mail</label>
-          <input type="email" placeholder="seu@email.com">
+          <input type="email" placeholder="seu.email@exemplo.com">
         </div>
         <div class="form-group">
           <label>Telefone / WhatsApp</label>
-          <input type="tel" placeholder="(11) 99000-0000">
+          <input type="tel" placeholder="">
         </div>
       </div>
       <div class="form-group">
@@ -336,7 +342,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2026 Nova Transportes Ltda. Todos os direitos reservados.</p>
-    <p>CNPJ: 00.000.000/0001-00 | ANTT: 00000-0</p>
+    <p>CNPJ: 66.033.962/0001-55 | ANTT: 00000-0</p>
   </div>
 </footer>
 
@@ -345,7 +351,7 @@
 </a>
 
 <script src="js/script.js" defer></script>
-
+66.033.962/0001-55
 <!-- Script para desenhar o mapa -->
 <script type="text/javascript">
   google.charts.load('current', {
