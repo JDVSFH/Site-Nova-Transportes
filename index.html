@@ -18,14 +18,17 @@
   <img src="img/logo_nova_2.png" alt="Logo Nova Transportes" class="logo-img">
   Nova <span>Transportes</span>
 </a>
-  <ul class="nav-links">
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#frota">Cobertura</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contato">Contato</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
+    <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+    <li><a href="#frota" onclick="closeMenu()">Cobertura</a></li>
+    <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+    <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
   </ul>
-  <a href="#contato" class="nav-cta">Solicitar Cotação</a>
+  <a href="#contato" class="nav-cta desktop-only">Solicitar Cotação</a>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section id="hero">
@@ -102,16 +105,16 @@
   </div>
 </section>
 
-<section id="sobre" style="padding:100px 8%;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;background:var(--gray-100);padding:80px 0;">
-    <div style="padding-left:8%;position:relative;">
+<section id="sobre">
+  <div class="sobre-inner">
+    <div class="sobre-img-col">
       <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=80" alt="Equipe Nova Transportes" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;">
-      <div style="position:absolute;bottom:-20px;right:60px;background:var(--red);padding:28px 32px;">
+      <div class="sobre-badge-anos">
         <div style="font-family:var(--font-display);font-size:42px;font-weight:800;color:var(--white);line-height:1;">15</div>
         <div style="font-size:13px;color:rgba(255,255,255,0.8);margin-top:4px;">anos no mercado</div>
       </div>
     </div>
-    <div style="padding-right:8%;padding-top:20px;">
+    <div class="sobre-text-col">
       <div class="section-tag reveal">Quem somos</div>
       <h2 class="section-title reveal d1">Uma empresa que<br>move o Brasil</h2>
       <p style="font-size:16px;line-height:1.8;color:var(--gray-500);margin-bottom:20px;" class="reveal d2">
@@ -228,7 +231,7 @@
   </div>
 </section>
 
-<section id="contato" style="background:var(--gray-100);padding:100px 8%;display:grid;grid-template-columns:1fr 1.3fr;gap:80px;">
+<section id="contato">
   <div>
     <div class="section-tag reveal">Contato</div>
     <h2 class="section-title reveal d1">Vamos conversar<br>sobre sua carga</h2>

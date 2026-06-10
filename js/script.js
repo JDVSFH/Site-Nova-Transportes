@@ -5,6 +5,34 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 reveals.forEach(el => obs.observe(el));
 
+// Menu hamburguer
+function toggleMenu() {
+  const nav = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-hamburger');
+  const isOpen = nav.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function closeMenu() {
+  const nav = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-hamburger');
+  nav.classList.remove('open');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-hamburger');
+  if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    closeMenu();
+  }
+});
+
 // Comportamento do FAQ (Abrir e fechar perguntas)
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
